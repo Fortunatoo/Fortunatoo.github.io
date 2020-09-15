@@ -171,20 +171,21 @@ function atualizaResposta() {
  
 //Função Subtrair
 function subtrair(){
-    if(verificarEntradasVazias()){
-     resposta.classList.remove('certa');
-     resposta.classList.add('errada');
-     resposta.textContent = "Erro: Preencha os dois números!"
-    }else{
-     resposta.classList.remove('errada');
-     resposta.classList.add('certa');
-     let numero1 = pegarNum1();
-     let numero2 = pegarNum2();
-     //Efetuando a subtração
-     let subtrai = parseInt(numero1) - parseInt(numero2);
-     resposta.textContent = `${numero1} - ${numero2} = ${soma}`;
-    }
- }
+   if(verificarEntradasVazias()){
+    resposta.classList.remove('certa');
+    resposta.classList.add('errada');
+    resposta.textContent = "Erro: Preencha os dois números!"
+   }else{
+    resposta.classList.remove('errada');
+    resposta.classList.add('certa');
+    let numero1 = pegarNum1();
+    let numero2 = pegarNum2();
+    //Efetuando a subtração
+    let subtrai = parseInt(numero1) - parseInt(numero2);
+    resposta.textContent = `${numero1} - ${numero2} = ${subtrai}`;
+   }
+}
+
   
  //Função Dividir
  function dividir(){
